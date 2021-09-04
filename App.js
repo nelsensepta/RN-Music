@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import AudioProvider from "./app/context/AudioProvider";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AudioProvider>
+      <AppNavigator />
+    </AudioProvider>
   );
-}
+  // return (
+  //   <View style={{ marginTop: 100 }}>
+  //     <AudioListItem />
+  //     <AudioListItem />
+  //     <AudioListItem />
+  //     <AudioListItem />
+  //   </View>
+  // );
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  // Episode 16 Menit 06.29
+}
